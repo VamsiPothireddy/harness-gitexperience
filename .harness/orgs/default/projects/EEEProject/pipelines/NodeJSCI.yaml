@@ -28,7 +28,7 @@ pipeline:
             type: KubernetesDirect
             spec:
               connectorRef: org.githubcodespaceCluster
-              namespace: dev
+              namespace: harness-delegate-ng
               automountServiceAccountToken: true
               nodeSelector: {}
               os: Linux
