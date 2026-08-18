@@ -1,0 +1,5 @@
+service:
+  name: hello-rest-api
+  identifier: hellorestapi
+  orgIdentifier: default
+  projectIdentifier: EEEProject
