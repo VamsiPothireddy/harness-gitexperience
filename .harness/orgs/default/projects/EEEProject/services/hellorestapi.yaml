@@ -3,3 +3,25 @@ service:
   identifier: hellorestapi
   orgIdentifier: default
   projectIdentifier: EEEProject
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: NodeJSService
+            type: HelmChart
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: PersonalGitHub
+                  gitFetchType: Branch
+                  folderPath: /nodejs-services/nodejs-services
+                  repoName: helm-charts
+                  branch: main
+              subChartPath: ""
+              optionalValuesYaml: false
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              helmVersion: V3
+              fetchHelmChartMetadata: false
+    type: Kubernetes
